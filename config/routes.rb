@@ -26,9 +26,9 @@ Rails.application.routes.draw do
 
   resources :letters, only: :index, type: 'Letter' do
     member do
-      post 'create_pdfs', as: 'create_pdfs_for' 
-      delete 'delete_pdfs', as: 'delete_pdfs_for' 
-      get 'get_pdfs', as: 'get_pdfs_for' 
+      post 'create_pdfs', as: 'create_pdfs_for'
+      delete 'delete_pdfs', as: 'delete_pdfs_for'
+      get 'get_pdfs', as: 'get_pdfs_for'
     end
   end
   #Letters STI routing
@@ -46,7 +46,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :payments, only: :index 
+  resources :payments, only: :index
   resources :payments, only: :show, format: true, constraints: {format: :pdf}
 
   resources :pdfs, only: [:destroy, :update]

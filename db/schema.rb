@@ -93,7 +93,7 @@ ActiveRecord::Schema.define(version: 20160821125517) do
     t.datetime "updated_at",                                  null: false
     t.date     "terminated_at"
     t.string   "number"
-    t.date     "valid_from",                                  null: false
+    t.date     "valid_from"
   end
 
   create_table "funds", force: :cascade do |t|
